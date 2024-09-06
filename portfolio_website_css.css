@@ -99,7 +99,9 @@ footer {
 }
 
 .gallery img {
-    max-width: 450px !important;
+    max-width: 500px !important;
     height: auto !important;
+    border: 2px solid #ddd;
+    border-radius: 5px !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
