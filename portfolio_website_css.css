@@ -64,7 +64,7 @@ p {
 .about-content {
     display: flex;
     justify-content: flex-start;
-    align-items: left;
+    align-items: flex-start;
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
@@ -86,5 +86,22 @@ footer {
     background-color: #e6eee0;
     padding: 15px;
     text-align: center;
-    color: #2e4e42;
+    color: #2e4e2e;
+}
+
+/* Photography Page Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.gallery img {
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
