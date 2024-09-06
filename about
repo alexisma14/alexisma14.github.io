@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexis' Portfolio - About</title>
+    <link rel="stylesheet" href="portfolio_website_css.css">
+</head>
+<body>
+    <header>
+        <h1>Alexis' Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="/Users/alexisma/Desktop/fall 2024/lmc 2700/me.png" alt="Alexis" class="about-photo">
+            <div class="about-text">
+                <p>
+                    I'm a second year at Georgia Tech studying Computational Media. My current career
+                    path is going into UX/UI design. However, I enjoy all forms of art and indulge in creatiing
+                    different types during my free time. Such as photography or video editing. When I'm not
+                    working, you can find me hanging out with friends, thrifting, making matcha, or dogsitting!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Alexis' Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
