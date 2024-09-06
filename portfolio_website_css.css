@@ -93,15 +93,15 @@ footer {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 100px;
     justify-content: center;
     margin: 20px;
 }
 
 .gallery img {
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
     border: 2px solid #ddd;
-    border-radius: 8px;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
