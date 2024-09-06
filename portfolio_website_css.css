@@ -1,0 +1,90 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* Light pink */
+    color: #2e4e2e; /* Dark sage green */
+}
+
+header {
+    background-color: #45632f; /* Sage green */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Arial', sans-serif;
+    color: #ffe8f8;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffe8f8;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #8e9775;
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2e4e42;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #2e4e42;
+}
+
+/* About Page Styling */
+.about-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-photo {
+    width: 200px;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: 5px solid #e6eee0; /* Sage green border */
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+footer {
+    background-color: #e6eee0;
+    padding: 15px;
+    text-align: center;
+    color: #2e4e42;
+}
