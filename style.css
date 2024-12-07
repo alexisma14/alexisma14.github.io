@@ -272,6 +272,7 @@ nav {
     width: 380px; /* Matches container dimensions */
     height: 380px;
     object-fit: cover; /* Ensures image covers the container */
+    src: 'avatar.png';
 }
 @keyframes imgFloat {
     50% {
