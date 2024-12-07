@@ -33,7 +33,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText",{
-  strings : ["Designer","Youtuber","Developer"],
+  strings : ["Designer","Creative","Photographer","Artist"],
   loop : true,
   typeSpeed : 100, 
   backSpeed : 80,
@@ -90,7 +90,6 @@ srRight.reveal('.form-control',{delay: 100})
 
 
 /* ----- CHANGE ACTIVE LINK ----- */
-
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
