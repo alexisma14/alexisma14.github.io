@@ -1,273 +1,305 @@
 /* ----- FONT IMPORTS ----- */
+/* Importing custom fonts for use in the design: Meow Script for decorative text and Jost for general text */
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Jost:wght@400;600&display=swap');
 
 /* ----- VARIABLES ----- */
-:root{
-    --body-color: #FFE9F4;
-    --color-white: rgb(255, 255, 255);
-    --text-color-second: rgb(68, 68, 68);
-    --text-color-third: #4E5D9C;
-    --first-color: #4E5D9C;
-    --first-color-hover: #3d4a7d;
-    --second-color: #FCFFBA;
-    --third-color: #4E5D9C;
-    --first-shadow-color: rgba(0, 0, 0, 0.1);
+/* Declaring CSS variables for theme colors and reusable properties */
+:root {
+    --body-color: #FFE9F4; /* Light pink background color */
+    --color-white: rgb(255, 255, 255); /* Pure white */
+    --text-color-second: rgb(68, 68, 68); /* Dark gray text */
+    --text-color-third: #4E5D9C; /* Dark blue text */
+    --first-color: #4E5D9C; /* Primary blue */
+    --first-color-hover: #3d4a7d; /* Darker blue for hover states */
+    --second-color: #FCFFBA; /* Light yellow */
+    --third-color: #4E5D9C; /* Dark blue (repeated) */
+    --first-shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* ----- BASE ----- */
-*{
+/* Resetting margins and paddings, and setting universal styles */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
+    box-sizing: border-box; /* Ensures padding and borders are included in element size */
+    font-family: 'Jost', sans-serif; /* Sets a clean sans-serif font */
+    font-weight: 400; /* Default font weight */
 }
 
 /* ----- SMOOTH SCROLL ----- */
-html{
+/* Enables smooth scrolling for anchor links */
+html {
     scroll-behavior: smooth;
 }
 
 /* ----- CHANGE THE SCROLL BAR DESIGN ----- */
-::-webkit-scrollbar{
+/* Customizes the appearance of the browser scroll bar */
+::-webkit-scrollbar {
     width: 10px;
     border-radius: 25px;
 }
-::-webkit-scrollbar-track{
-    background: #f1f1f1;
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for the scrollbar track */
 }
-::-webkit-scrollbar-thumb{
-    background: #ccc;
+::-webkit-scrollbar-thumb {
+    background: #ccc; /* Gray for the scrollbar handle */
     border-radius: 30px;
 }
-::-webkit-scrollbar-thumb:hover{
-    background: #bbb;
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb; /* Darker gray on hover */
 }
-
 
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
-.btn{
+/* Common styles for buttons */
+.btn {
     font-weight: 500;
-    padding: 12px 20px;
+    font-size: 15px;
+    padding: 7px 20px;
     background: var(--body-color);
     border: none;
-    border-radius: 25px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: .4s;
+    transition: 0.4s; /* Smooth transitions */
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically centers the items (text and icon) */
+    justify-content: center; /* Horizontally centers the items */
 }
-.btn>i{
-    margin-left: 10px;
+.btn > i {
+    margin-left: 10px; /* Space between text and icons */
 }
-.btn:hover{
-    background: var(--second-color);
-    color: var(--first-color);
+.btn:hover {
+    background: var(--second-color); /* Light yellow background on hover */
+    color: var(--first-color); /* Blue text on hover */
 }
 
 /* ----- GLOBAL ICONS DESIGN ----- */
-i{
-    font-size: 16px;
+/* Sets consistent icon size */
+i {
+    font-size: 25px;
 }
 
 /* ------- BASE -------- */
-body{
-    background: var(--body-color);
+/* Basic styling for the body and container elements */
+body {
+    background: var(--body-color); /* Light pink background */
 }
-.container{
+.container {
     width: 100%;
     position: relative;
 }
 
 /* ----- NAVIGATION BAR ----- */
-nav{
+/* Styles for the fixed navigation bar */
+nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 90px;
-    line-height: 90px;
+    line-height: 90px; /* Vertically centers text */
     background: var(--first-color);
-    padding-inline: 9vw;
-    transition: .3s;
-    z-index: 100;
+    padding-inline: 9vw; /* Horizontal padding */
+    transition: 0.3s; /* Smooth transitions */
+    z-index: 100; /* Ensures nav stays on top */
 }
-.nav-logo{
-   position: relative;
+.nav-logo {
+    position: relative;
 }
-.nav-name{
-	font-family: 'Meow Script', cursive;
+.nav-name {
+    font-family: 'Meow Script', cursive; /* Decorative script font */
     font-size: 36px;
-    color: var(--body-color);
+    color: var(--body-color); /* Light pink text */
 }
-.nav-logo span{
+.nav-logo span {
     position: absolute;
     top: -15px;
     right: -20px;
     font-size: 5em;
-    color: var(--text-color-second);
+    color: var(--text-color-second); /* Dark gray */
 }
-.nav-menu, .nav_menu_list{
-    display: flex;
+.nav-menu, .nav_menu_list {
+    display: flex; /* Horizontal layout for navigation */
 }
-.nav-menu .nav_list{
-    list-style: none;
-    position: relative;
+/* ----- NAVIGATION MENU ----- */
+.nav-menu .nav_list {
+    list-style: none; /* Removes default bullet points */
+    position: relative; /* Positions children relative to this element */
 }
 .nav-link {
-    text-decoration: none;
-    color: var(--color-white);
-    font-weight: 600;
-    padding-inline: 15px;
-    margin-inline: 20px;
+    text-decoration: none; /* Removes underline from links */
+    color: var(--color-white); /* Sets link color */
+    font-weight: 600; /* Makes text bold */
+    padding-inline: 15px; /* Adds horizontal padding */
+    margin-inline: 20px; /* Adds horizontal margin */
 }
-.nav-menu-btn{
-    display: none;
+.nav-menu-btn {
+    display: none; /* Hides menu button by default */
 }
-.nav-menu-btn i{
-    font-size: 28px;
-    cursor: pointer;
+.nav-menu-btn i {
+    font-size: 28px; /* Sets size of the menu icon */
+    cursor: pointer; /* Changes cursor to pointer on hover */
 }
-.active-link{
-    position: relative;
-    color: var(--first-color);
-    transition: .3;
+.active-link {
+    position: relative; /* Needed for pseudo-element positioning */
+    color: var(--second-color); /* Changes color of active link */
+    transition: .3s; /* Smooth transition for color change */
 }
-.active-link::after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translate(-50%, -50%);
-    width: 5px;
-    height: 5px;
-    background: var(--first-color);
-    border-radius: 50%;
+.active-link::after {
+    content: ''; /* Adds decorative element below active link */
+    position: absolute; /* Positions relative to parent */
+    left: 50%; /* Centers the dot horizontally */
+    bottom: -15px; /* Positions the dot below text */
+    transform: translate(-50%, -50%); /* Ensures proper alignment */
+    width: 5px; /* Size of the dot */
+    height: 5px; 
+    background: var(--first-color); /* Dot color */
+    border-radius: 50%; /* Makes the dot circular */
 }
 
 /* ----- WRAPPER DESIGN ----- */
-.wrapper{
-    padding-inline: 10vw;
+.wrapper {
+    padding-inline: 10vw; /* Adds horizontal padding, responsive to viewport width */
 }
 
 /* ----- FEATURED BOX ----- */
-.featured-box{
-    position: relative;
-    display: flex;
-    height: 100vh;
-    min-height: 700px;
+.featured-box {
+    position: relative; /* Needed for positioning its children */
+    display: flex; /* Creates a flexible layout */
+    height: 100vh; /* Sets height to full viewport */
+    min-height: 700px; /* Ensures minimum height */
 }
 
 /* ----- FEATURED TEXT BOX ----- */
-.featured-text{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    min-height: 80vh;
-    flex-direction: column;
-    width: 50%;
-    padding-left: 20px;
+.featured-text {
+    position: relative; /* Relative positioning for child elements */
+    display: flex; /* Flexible layout */
+    justify-content: center; /* Centers content horizontally */
+    align-content: center; /* Centers content within lines */
+    min-height: 80vh; /* Ensures minimum height */
+    flex-direction: column; /* Stacks children vertically */
+    width: 50%; /* Takes half of parent width */
+    padding-left: 20px; /* Adds left padding */
 }
-.featured-text-card span{
-    background: var(--third-color);
-    color: var(--color-white);
-    padding: 3px 8px;
-    font-size: 12px;
-    border-radius: 5px;
+.featured-text-card span {
+    background: var(--third-color); /* Sets background color */
+    color: var(--color-white); /* Sets text color */
+    padding: 7px 12px; /* Adds padding around text */
+    font-size: 17px; /* Sets font size */
+    border-radius: 5px; /* Rounds corners */
 }
-.featured-name{
-    font-size: 50px;
-    font-weight: 700;
-    color: var(--text-color-second);
-    margin-block: 20px;
+.featured-name {
+    font-size: 50px; /* Large font for feature name */
+    font-weight: 700; /* Bold font weight */
+    color: var(--text-color-second); /* Sets color */
+    margin-block: 20px; /* Adds vertical margin */
 }
-.typedText{
-    text-transform: capitalize;
-    color: var(--text-color-third);
+.typedText {
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+    color: var(--text-color-third); /* Sets color */
 }
-.featured-text-info{
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: var(--text-color-second);
+.featured-text-info {
+    font-size: 20px; /* Sets font size */
+    margin-bottom: 30px; /* Adds bottom margin */
+    color: var(--text-color-second); /* Sets color */
 }
-.featured-text-btn{
-    display: flex;
-    gap: 20px;
+.featured-text-btn {
+    display: flex; /* Lays out buttons horizontally */
+    gap: 20px; /* Adds space between buttons */
 }
-.featured-text-btn>.blue-btn{
-    background: var(--first-color);
-    color: var(--color-white);
+.featured-text-btn > .blue-btn {
+    background: var(--first-color); /* Sets button color */
+    color: var(--color-white); /* Sets text color */
+    font-size: 17px; /* Adjusted font size */
+    padding: 10px 20px; /* Optional adjustment to maintain spacing */
 }
-.featured-text-btn>.blue-btn:hover{
-    background: var(--first-color-hover);
+.featured-text-btn > .blue-btn:hover {
+    background: var(--first-color-hover); /* Changes background color on hover */
 }
-.social_icons{
-    display: flex;
-    margin-top: 5em;
-    gap: 30px;
+
+/* Featured Section Resume Button */
+.featured-text-btn .btn.resume-btn {
+    background: var(--color-white); /* White background */
+    font-size: 17px; /* Adjust font size */
+    padding: 10px 20px; /* Maintain padding */
 }
-.icon{
-    display: flex;
+.featured-text-btn .btn.resume-btn:hover {
+    background: var(--second-color); /* Light yellow on hover */
+    color: var(--first-color); /* Blue text on hover */
+}
+
+.social_icons {
+    display: flex; /* Flexible layout for social icons */
+    margin-top: 5em; /* Adds top margin */
+    gap: 30px; /* Spacing between icons */
+}
+.icon {
+    display: flex; /* Centers content */
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-	background: var(--second-color);
-    border-radius: 50%;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
+    width: 50px; /* Sets width */
+    height: 50px; /* Sets height */
+    background: var(--second-color); /* Icon background color */
+    border-radius: 50%; /* Makes icons circular */
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25); /* Adds shadow */
+    cursor: pointer; /* Pointer cursor on hover */
 }
-.icon:hover{
-    color: var(--first-color);
+.icon i {
+    font-size: 25px; /* Increase icon size */
+}
+.icon:hover {
+    color: var(--first-color); /* Changes icon color on hover */
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
-.featured-image{
-    display: flex;
-    justify-content: right;
-    align-content: center;
-    min-height: 80vh;
-    width: 50%;
+.featured-image {
+    display: flex; /* Flexible layout */
+    justify-content: right; /* Aligns content to the right */
+    align-content: center; /* Aligns items within lines */
+    min-height: 80vh; /* Ensures minimum height */
+    width: 50%; /* Takes half the parent width */
 }
-.image{
-    margin: auto 0;
-    width: 380px;
-    height: 380px;
-    border-radius: 55% 45% 55% 45%;
-    overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
+.image {
+    margin: auto 0; /* Centers vertically */
+    width: 380px; /* Sets image width */
+    height: 380px; /* Sets image height */
+    border-radius: 55% 45% 55% 45%; /* Creates organic shape */
+    overflow: hidden; /* Clips overflow */
+    animation: imgFloat 7s ease-in-out infinite; /* Floating animation */
 }
-.image img{
-    width: 380px;
+.image img {
+    width: 380px; /* Matches container dimensions */
     height: 380px;
-    object-fit: cover;
+    object-fit: cover; /* Ensures image covers the container */
 }
 @keyframes imgFloat {
-    50%{
-        transform: translateY(10px);
-        border-radius: 45% 55% 45% 55%;
+    50% {
+        transform: translateY(10px); /* Moves image downward */
+        border-radius: 45% 55% 45% 55%; /* Changes shape mid-animation */
     }
 }
-.scroll-btn{
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   translate: -50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 150px;
-   height: 50px;
-   gap: 5px;
-   text-decoration: none;
-   color: var(--text-color-second);
-   background: var(--color-white);
-   border-radius: 30px;
-   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+
+/* ----- SCROLL BUTTON ----- */
+.scroll-btn {
+    position: absolute; /* Positions button relative to parent */
+    bottom: 0; /* Places it at the bottom */
+    left: 50%; /* Centers horizontally */
+    translate: -50%; /* Ensures perfect centering */
+    display: flex; /* Flexible layout */
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Sets button width */
+    height: 50px; /* Sets button height */
+    gap: 5px; /* Adds spacing between elements */
+    text-decoration: none; /* Removes underline */
+    color: var(--text-color-second); /* Sets text color */
+    background: var(--color-white); /* Sets background color */
+    border-radius: 30px; /* Rounds corners */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25); /* Adds shadow */
 }
-.scroll-btn i{
-    font-size: 20px;
+.scroll-btn i {
+    font-size: 20px; /* Sets icon size */
 }
 
 /* ----- MAIN BOX ----- */
@@ -544,7 +576,6 @@ footer{
     margin-top: 10px;
 }
 
-
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px){
     .featured-text{
@@ -636,7 +667,6 @@ footer{
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
-
 @media only screen and (max-width: 540px){
     .featured-name{
         font-size: 40px;
