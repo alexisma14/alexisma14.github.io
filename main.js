@@ -90,6 +90,7 @@ srRight.reveal('.form-control',{delay: 100})
 
 
 /* ----- CHANGE ACTIVE LINK ----- */
+
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
