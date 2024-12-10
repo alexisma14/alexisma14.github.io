@@ -134,13 +134,56 @@ nav {
     padding-inline: 15px; /* Adds horizontal padding */
     margin-inline: 20px; /* Adds horizontal margin */
 }
+/* Style for the nav resume button */
+.nav-button a {
+    background: var(--body-color);
+    color: var(--first-color);
+    padding: 7px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.4s;
+}
+.nav-button a:hover {
+    background: var(--second-color);
+}
+.nav-button a i {
+    font-size: 20px;
+}
+
 .nav-menu-btn {
     display: none; /* Hides menu button by default */
 }
+
+/* Style for the menu button */
 .nav-menu-btn i {
-    font-size: 28px; /* Sets size of the menu icon */
-    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--body-color); /* Changes icon color to light pink */
 }
+
+/* Style for the responsive menu */
+.nav-menu.responsive {
+    background: var(--first-color) !important; /* Changes from semi-transparent white to dark blue */
+    backdrop-filter: none;
+}
+
+.nav-menu.responsive .nav-link {
+    color: var(--body-color); /* Changes text color to light pink */
+}
+
+/* Active link in responsive menu */
+.nav-menu.responsive .active-link {
+    color: var(--second-color); /* Changes active link to light yellow */
+}
+
+.nav-menu.responsive .active-link::after {
+    background: var(--second-color); /* Changes the dot below active link to light yellow */
+}
+
 .active-link {
     position: relative; /* Needed for pseudo-element positioning */
     color: var(--second-color); /* Changes color of active link */
